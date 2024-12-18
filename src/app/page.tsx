@@ -23,7 +23,7 @@ function App() {
       <CssBaseline />
       <Router>
         <Routes>
-          <Route path="/" element={<SignUp />} />
+          <Route path="/" element={<Dashboard />} />
           <Route path="/dashboard" element={<Dashboard />} />
         </Routes>
       </Router>
