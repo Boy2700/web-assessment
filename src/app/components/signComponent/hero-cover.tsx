@@ -17,9 +17,10 @@ const HeroCover = () => {
         justifyContent: 'center',
         bgcolor: '#1F67EA', // Light background
         width:'500px',
-        height: '100%',
+        height: '95%',
         borderRadius:2,
-        p:2
+        p:2,
+        overflow: 'hidden',
       }}
     >
       {/* Logo at the Top Left */}

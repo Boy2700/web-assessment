@@ -1,9 +1,13 @@
+"use client"
 import { useState } from 'react';
 import {Box,Drawer,List,ListItem,ListItemButton, ListItemIcon,ListItemText,TextField,Typography,useTheme,} from '@mui/material';
 import {Home,Person,Inventory,Receipt,History,Logout,CurrencyExchange,Group, ShoppingCart, Discount,} from '@mui/icons-material';
-import { MetricCard } from '../components/dashboardComponent/metric-card';
-import { RevenueChart } from '../components/dashboardComponent/revenue-chart';
-import { SalesMetrics } from '../components/dashboardComponent/sales-metric';
+import { MetricCard } from '../../components/dashboardComponent/metric-card';
+import { RevenueChart } from '../../components/dashboardComponent/revenue-chart';
+import { SalesMetrics } from '../../components/dashboardComponent/sales-metric';
+import Link from 'next/link';
+
+
 
 const DRAWER_WIDTH = 240;
 
@@ -68,12 +72,14 @@ export default function Dashboard() {
           ))}
         </List>
         <Box sx={{ mt: 'auto', p: 2 }}>
-          <ListItemButton>
+        <Link href="/" passHref>
+            <ListItemButton >
             <ListItemIcon>
-              <Logout />
+                <Logout />
             </ListItemIcon>
             <ListItemText primary="Logout" />
-          </ListItemButton>
+            </ListItemButton>
+        </Link>
         </Box>
       </Drawer>
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>

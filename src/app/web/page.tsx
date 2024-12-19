@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
 import { Container, Grid2, Box, useTheme, useMediaQuery } from "@mui/material";
-import SparForm from "./signComponent/spar-form";
-import HeroCover from "./signComponent/hero-cover";
+import SparForm from "../components/signComponent/spar-form";
+import HeroCover from "../components/signComponent/hero-cover";
 
 const SignUp = () => {
   const theme = useTheme();
@@ -16,10 +16,10 @@ const SignUp = () => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        p:2,
+       // py:2,
       }}
     >
-      <Box sx={{ width: "100%" }}>
+      <Box sx={{ width: "100%", mt:2}}>
         <Grid2 container spacing={2} sx={{ height: "100%" }}>
           {/* HeroCover - Hidden on Mobile */}
           {!isMobile && (
